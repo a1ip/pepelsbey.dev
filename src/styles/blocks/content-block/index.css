@@ -7,7 +7,7 @@
 
 /* Headings */
 
-.content-block :where(h2, h3) {
+.content-block :is(h2, h3) {
     margin: 0;
     scroll-margin-block-start: 88px;
     font-weight: normal;
@@ -38,7 +38,7 @@
 
 /* Lists */
 
-.content-block :where(ol, ul) {
+.content-block :is(ol, ul) {
     display: grid;
     row-gap: 8px;
     margin: 0;
@@ -95,8 +95,8 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 20px;
     border: 2px solid var(--content-image-outline);
+    border-radius: 20px;
 }
 
 /* Frames */
@@ -120,4 +120,10 @@
 .content-block figcaption {
     text-align: center;
     font-size: var(--font-size-small);
+}
+
+/* Details */
+
+.content-block details {
+    overflow: auto;
 }
